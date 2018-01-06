@@ -24,16 +24,15 @@ Gem::Specification.new do |gem|
   gem.executables << 'ladon-flags'
 
   gem.required_ruby_version = '>= 2.1.0' # due to use of required keyword args
-  gem.add_runtime_dependency 'pry', '~> 0.10' # for interactive mode support in ladon-run
+
   gem.add_runtime_dependency 'nokogiri', '~> 1.7' # for junit generation
+  gem.add_runtime_dependency 'pry', '~> 0.10' # for interactive mode support in ladon-run
+  gem.add_runtime_dependency 'pry-byebug' # for interactive mode support in ladon-run
+  gem.add_runtime_dependency 'pry-stack_explorer' # for interactive mode support in ladon-run
 
-  # NOT REQUIRED: install this gem to get byebug features baked into pry sessions
-  # s.add_runtime_dependency 'pry-byebug'
-
-  # NOT REQUIRED: install this gem to
-  # s.add_runtime_dependency 'pry-stack_explorer' # for interactive mode support in ladon-run
-
-  gem.add_dependency 'rake', '~> 11.3'
+  gem.add_development_dependency 'rake', '~> 11.3'
   gem.add_development_dependency 'rspec', '~> 3.6' # for specs
   gem.add_development_dependency 'rubocop', '~> 0.49' # for linting
+  gem.add_development_dependency 'rubygems-tasks'
+  gem.add_development_dependency 'simplecov'
 end
